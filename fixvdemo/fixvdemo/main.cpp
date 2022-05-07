@@ -114,7 +114,7 @@ int CALLBACK WinMain(
 						webviewController->put_Bounds(bounds);
 
 						// Schedule an async task to navigate to Bing
-						webviewWindow->Navigate(L"https://www.baidu.com/");
+						webviewWindow->Navigate(L"https://www.bilibili.com/");
 
 						// Step 4 - Navigation events
 						// register an ICoreWebView2NavigationStartingEventHandler to cancel any non-https navigation
@@ -157,10 +157,10 @@ int CALLBACK WinMain(
 						// Schedule an async task to add initialization script that
 						// 1) Add an listener to print message from the host
 						// 2) Post document URL to the host
-						webviewWindow->AddScriptToExecuteOnDocumentCreated(
+						/*webviewWindow->AddScriptToExecuteOnDocumentCreated(
 							L"window.chrome.webview.addEventListener(\'message\', event => alert(event.data));" \
 							L"window.chrome.webview.postMessage(window.document.URL);",
-							nullptr);
+							nullptr);*/
 
 						return S_OK;
 					}).Get());
